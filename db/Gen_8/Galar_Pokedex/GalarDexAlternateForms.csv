@@ -1,0 +1,34 @@
+Dex_Number,Name,Type_1,Type_2,Ability_1,Ability_2,Ability_3,Ability_4,HP,Attack,Defense,Special_Attack,Special_Defense,Speed
+182,Meowth,NORMAL,null,Pickup,Technician,Unnerve,null,40,45,35,40,40,90
+327,Yamask,GHOST,null,Mummy,null,null,null,38,30,85,55,65,30
+333,Ponyta,FIRE,null,Run Away,Flash Fire,Flame Body,null,50,85,55,65,65,90
+334,Rapidash,FIRE,null,Run Away,Flash Fire,Flame Body,null,65,100,70,80,80,105
+365,Mr. Mime,PSYCHIC,FAIRY,Soundproof,Filter,Technician,null,40,45,65,100,120,90
+367,Darumaka,FIRE,null,Hustle,Inner Focus,null,null,70,90,45,15,45,50
+368,Darmanitan,FIRE,null,Sheer Force,Zen Mode,null,null,105,140,55,30,55,95
+368,Darmanitan,FIRE,PSYCHIC,Zen Mode,null,null,null,105,30,105,140,105,55
+368,Darmanitan,ICE,FIRE,Zen Mode,null,null,null,105,160,55,30,55,135
+372,Fan Rotom,ELECTRIC,FLYING,Levitate,null,null,null,50,65,107,105,107,86
+372,Frost Rotom,ELECTRIC,ICE,Levitate,null,null,null,50,65,107,105,107,86
+372,Heat Rotom,ELECTRIC,FIRE,Levitate,null,null,null,50,65,107,105,107,86
+372,Mow Rotom,ELECTRIC,GRASS,Levitate,null,null,null,50,65,107,105,107,86
+372,Wash Rotom,ELECTRIC,WATER,Levitate,null,null,null,50,65,107,105,107,86
+382,Silvally,BUG,null,RKS System,null,null,null,95,95,95,95,95,95
+382,Silvally,DARK,null,RKS System,null,null,null,95,95,95,95,95,95
+382,Silvally,DRAGON,null,RKS System,null,null,null,95,95,95,95,95,95
+382,Silvally,ELECTRIC,null,RKS System,null,null,null,95,95,95,95,95,95
+382,Silvally,FAIRY,null,RKS System,null,null,null,95,95,95,95,95,95
+382,Silvally,FIGHTING,null,RKS System,null,null,null,95,95,95,95,95,95
+382,Silvally,FIRE,null,RKS System,null,null,null,95,95,95,95,95,95
+382,Silvally,FLYING,null,RKS System,null,null,null,95,95,95,95,95,95
+382,Silvally,GHOST,null,RKS System,null,null,null,95,95,95,95,95,95
+382,Silvally,GRASS,null,RKS System,null,null,null,95,95,95,95,95,95
+382,Silvally,GROUND,null,RKS System,null,null,null,95,95,95,95,95,95
+382,Silvally,ICE,null,RKS System,null,null,null,95,95,95,95,95,95
+382,Silvally,POISON,null,RKS System,null,null,null,95,95,95,95,95,95
+382,Silvally,PSYCHIC,null,RKS System,null,null,null,95,95,95,95,95,95
+382,Silvally,ROCK,null,RKS System,null,null,null,95,95,95,95,95,95
+382,Silvally,STEEL,null,RKS System,null,null,null,95,95,95,95,95,95
+382,Silvally,WATER,null,RKS System,null,null,null,95,95,95,95,95,95
+398,Zacian Crowned Sword,FAIRY,STEEL,Intrepid Sword,null,null,null,92,170,115,80,115,148
+399,Zamazenta Crowned Shield,FIGHTING,STEEL,Dauntless Shield,null,null,null,92,130,145,80,145,128
