@@ -22,8 +22,8 @@ Dex_Number,Name,Type_1,Type_2,Ability_1,Ability_2,Ability_3,Ability_4,HP,Attack,
 021,Rookidee,FLYING,null,Keen Eye,Unnerve,Big Pecks,null,38,47,35,33,35,57
 022,Corvisquire,FLYING,null,Keen Eye,Unnerve,Big Pecks,null,68,67,55,43,55,77
 023,Corviknight,FLYING,STEEL,Pressure,Unnerve,Mirror Armor,null,98,87,105,53,85,67
-024,Skwovet,NORMAL,null,CHeek Pouch, Gluttony,null,null,70,55,55,35,35,25
-025,Greedent,NORMAL,null,CHeek Pouch, Gluttony,null,null,120,95,95,55,75,20
+024,Skwovet,NORMAL,null,Cheek Pouch,Gluttony,null,null,70,55,55,35,35,25
+025,Greedent,NORMAL,null,Cheek Pouch,Gluttony,null,null,120,95,95,55,75,20
 026,Pidove,NORMAL,FLYING,Big Pecks,Super Luck,Rivalry,null,50,55,50,36,30,43
 027,Tranquill,NORMAL,FLYING,Big Pecks,Super Luck,Rivalry,null,62,77,62,50,42,65
 028,Unfezant,NORMAL,FLYING,Big Pecks,Super Luck,Rivalry,null,80,115,80,65,55,93
