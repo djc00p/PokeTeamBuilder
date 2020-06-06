@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_06_184808) do
+ActiveRecord::Schema.define(version: 2020_06_06_185630) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,26 @@ ActiveRecord::Schema.define(version: 2020_06_06_184808) do
     t.string "name"
     t.text "game_description"
     t.text "serebii_in_depth_description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "alternate_forms", force: :cascade do |t|
+    t.string "pokedex_number"
+    t.string "name"
+    t.string "type_1"
+    t.string "type_2"
+    t.string "ability_1"
+    t.string "ability_2"
+    t.string "ability_3"
+    t.string "ability_4"
+    t.integer "hp"
+    t.integer "attack"
+    t.integer "defense"
+    t.integer "special_attack"
+    t.integer "special_defense"
+    t.integer "speed"
+    t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
