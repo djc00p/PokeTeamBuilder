@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_06_193718) do
+ActiveRecord::Schema.define(version: 2020_06_06_200311) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(version: 2020_06_06_193718) do
     t.text "serebii_in_depth_description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "abilities_alternate_forms", id: false, force: :cascade do |t|
+    t.bigint "alternate_form_id", null: false
+    t.bigint "ability_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["ability_id", "alternate_form_id"], name: "index_ability_id_and_alternate_forms_id"
+    t.index ["alternate_form_id", "ability_id"], name: "index_alternate_forms_id_and_ability_id"
   end
 
   create_table "abilities_pokemons", id: false, force: :cascade do |t|
@@ -50,6 +59,24 @@ ActiveRecord::Schema.define(version: 2020_06_06_193718) do
     t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "alternate_forms_attacks", id: false, force: :cascade do |t|
+    t.bigint "alternate_form_id", null: false
+    t.bigint "attack_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["alternate_form_id", "attack_id"], name: "index_alternate_forms_id_and_attack_id"
+    t.index ["attack_id", "alternate_form_id"], name: "index_attack_id_and_alternate_forms_id"
+  end
+
+  create_table "alternate_forms_natures", id: false, force: :cascade do |t|
+    t.bigint "alternate_form_id", null: false
+    t.bigint "nature_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["alternate_form_id", "nature_id"], name: "index_alternate_forms_id_and_nature_id"
+    t.index ["nature_id", "alternate_form_id"], name: "index_nature_id_and_alternate_forms_id"
   end
 
   create_table "attacks", force: :cascade do |t|
