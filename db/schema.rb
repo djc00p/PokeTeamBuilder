@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_06_185630) do
+ActiveRecord::Schema.define(version: 2020_06_06_193718) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(version: 2020_06_06_185630) do
     t.text "serebii_in_depth_description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "abilities_pokemons", id: false, force: :cascade do |t|
+    t.bigint "pokemon_id", null: false
+    t.bigint "ability_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["ability_id", "pokemon_id"], name: "index_abilities_pokemons_on_ability_id_and_pokemon_id"
+    t.index ["pokemon_id", "ability_id"], name: "index_abilities_pokemons_on_pokemon_id_and_ability_id"
   end
 
   create_table "alternate_forms", force: :cascade do |t|
@@ -54,6 +63,15 @@ ActiveRecord::Schema.define(version: 2020_06_06_185630) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "attacks_pokemons", id: false, force: :cascade do |t|
+    t.bigint "pokemon_id", null: false
+    t.bigint "attack_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["attack_id", "pokemon_id"], name: "index_attacks_pokemons_on_attack_id_and_pokemon_id"
+    t.index ["pokemon_id", "attack_id"], name: "index_attacks_pokemons_on_pokemon_id_and_attack_id"
+  end
+
   create_table "items", force: :cascade do |t|
     t.string "type"
     t.string "image_url"
@@ -69,6 +87,15 @@ ActiveRecord::Schema.define(version: 2020_06_06_185630) do
     t.string "decreases"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "natures_pokemons", id: false, force: :cascade do |t|
+    t.bigint "pokemon_id", null: false
+    t.bigint "nature_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["nature_id", "pokemon_id"], name: "index_natures_pokemons_on_nature_id_and_pokemon_id"
+    t.index ["pokemon_id", "nature_id"], name: "index_natures_pokemons_on_pokemon_id_and_nature_id"
   end
 
   create_table "pokemons", force: :cascade do |t|
