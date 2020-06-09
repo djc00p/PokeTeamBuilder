@@ -18,4 +18,9 @@ RSpec.describe Pokemon, type: :model do
     it { should validate_numericality_of :speed}
     it { should validate_presence_of :image_url}
   end
+
+  describe "Relationships" do
+    it {should have_many :ability_pokemons}
+    it {should have_many(:abilities).through :ability_pokemons}
+  end
 end
