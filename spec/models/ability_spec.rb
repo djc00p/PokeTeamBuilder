@@ -6,4 +6,9 @@ RSpec.describe Ability, type: :model do
     it { should validate_presence_of :game_despcription }
     it { should validate_presence_of :serebii_in_depth_description }
   end
+
+  describe "Relationships" do
+    it {should have_many :ability_alternate_forms}
+    it {should have_many(:alternate_forms).through :ability_alternate_forms}
+  end
 end
