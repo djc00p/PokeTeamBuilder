@@ -11,4 +11,9 @@ RSpec.describe Attack, type: :model do
     it { should validate_presence_of :attack_type }
     it { should validate_presence_of :type_img }
   end
+
+  describe "Relationships" do
+    it {should have_many :attacks_alternate_forms}
+    it {should have_many(:alternate_forms).through :attacks_alternate_forms}
+  end
 end
