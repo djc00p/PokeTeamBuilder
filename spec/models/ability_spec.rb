@@ -8,7 +8,9 @@ RSpec.describe Ability, type: :model do
   end
 
   describe "Relationships" do
-    it {should have_many :ability_alternate_forms}
+    it {should have_many :abilities_alternate_forms}
     it {should have_many(:alternate_forms).through :ability_alternate_forms}
+    it {should have_many :abilities_pokemons}
+    it {should have_many(:pokemons).through :ability_pokemons}
   end
 end

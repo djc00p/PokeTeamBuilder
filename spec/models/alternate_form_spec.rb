@@ -20,7 +20,7 @@ RSpec.describe AlternateForm, type: :model do
   end
 
   describe "Relationships" do
-    it {should have_many :ability_alternate_forms}
-    it {should have_many(:abilities).through :ability_alternate_forms}
+    it {should have_many :abilities_alternate_forms}
+    it {should have_many(:abilities).through :abilities_alternate_forms}
   end
 end
