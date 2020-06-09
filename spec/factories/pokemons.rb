@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :pokemon do
+  factory :pokemon, class: Pokemon do
     dex_number { rand(1..400) }
     name { Faker::Games::Pokemon.name }
     type_1 { ["Normal","Fire","Water","Grass","Electric","Ice","Fighting","Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dark","Dragon","Steel","Fairy"] }
