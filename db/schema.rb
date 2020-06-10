@@ -129,11 +129,4 @@ ActiveRecord::Schema.define(version: 2020_06_09_205056) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "abilities_alternate_forms", "alternate_forms"
-  add_foreign_key "abilities_pokemons", "abilities"
-  add_foreign_key "abilities_pokemons", "pokemons"
-  add_foreign_key "attacks_alternate_forms", "attacks"
-  add_foreign_key "attacks_alternate_forms", "alternate_forms"
-  add_foreign_key "attacks_pokemons", "attacks"
-  add_foreign_key "attacks_pokemons", "pokemons"
 end
