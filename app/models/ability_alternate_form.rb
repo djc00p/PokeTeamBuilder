@@ -1,3 +1,0 @@
-class AbilityAlternateForm < ApplicationRecord
-
-end
