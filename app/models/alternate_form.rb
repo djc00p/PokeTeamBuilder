@@ -1,0 +1,3 @@
+class AlternateForm < ApplicationRecord
+
+end
