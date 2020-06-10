@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :item, class: Item do
+  factory :nature, class: Item do
     nature { "Mild"}
     increase { "Sp. Attack"}
     decreases { "Attack" }
