@@ -95,7 +95,7 @@ ActiveRecord::Schema.define(version: 2020_06_11_195110) do
   end
 
   create_table "items", force: :cascade do |t|
-    t.string "type"
+    t.string "item_type"
     t.string "image_url"
     t.string "name"
     t.text "effect"
