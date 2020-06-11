@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe AlternateForm, type: :model do
   describe "Validations" do
-    it { should validate_presence_of :dex_number }
+    it { should validate_presence_of :pokedex_number }
     it { should validate_presence_of :name }
     it { should validate_presence_of :type_1 }
     it { should validate_presence_of :type_2 }
@@ -22,7 +22,7 @@ RSpec.describe AlternateForm, type: :model do
   describe "Relationships" do
     it {should have_many :abilities_alternate_forms}
     it {should have_many(:abilities).through :abilities_alternate_forms}
-    it {should have_many :attacks_alternate_forms}
-    it {should have_many(:attacks).through :attacks_alternate_forms}
+    it {should have_many :alternate_forms_attacks}
+    it {should have_many(:attacks).through :alternate_forms_attacks}
   end
 end
