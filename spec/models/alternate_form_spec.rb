@@ -20,6 +20,7 @@ RSpec.describe AlternateForm, type: :model do
   end
 
   describe "Relationships" do
+    it {should belong_to :pokemons}
     it {should have_many :abilities_alternate_forms}
     it {should have_many(:abilities).through :abilities_alternate_forms}
     it {should have_many :alternate_forms_attacks}
