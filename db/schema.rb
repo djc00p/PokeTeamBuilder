@@ -72,15 +72,6 @@ ActiveRecord::Schema.define(version: 2020_06_11_195110) do
     t.index ["attack_id", "alternate_form_id"], name: "index_attack_id_and_alternate_forms_id"
   end
 
-  create_table "alternate_forms_pokemons", id: false, force: :cascade do |t|
-    t.bigint "alternate_form_id", null: false
-    t.bigint "pokemon_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["alternate_form_id", "pokemon_id"], name: "index_on_alternate_form_id_and_pokemon_id"
-    t.index ["pokemon_id", "alternate_form_id"], name: "index_on_pokemon_id_and_alternate_form_id_"
-  end
-
   create_table "attacks", force: :cascade do |t|
     t.string "name"
     t.string "move_type"
