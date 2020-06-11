@@ -33,7 +33,7 @@ namespace :import do
       )
       other_count += 1
     end
-    puts "Imported #{other_count} Other Attacks"
+    puts "Imported #{other_count} Gen 8 Other Attacks"
 
     # Physical Attacks
     CSV.foreach('./db/Gen_8/AttackDex/physicaldex.csv', headers: true, :header_converters => lambda { |h| h.try(:downcase) }) do |row|
@@ -51,7 +51,7 @@ namespace :import do
       )
       physical_count += 1
     end
-    puts "Imported #{physical_count} Physical Attacks"
+    puts "Imported #{physical_count} Gen 8 Physical Attacks"
 
     # Special Attacks
     CSV.foreach('./db/Gen_8/AttackDex/specialdex.csv', headers: true, :header_converters => lambda { |h| h.try(:downcase) }) do |row|
@@ -69,9 +69,55 @@ namespace :import do
       )
       special_count += 1
     end
-    puts "Imported #{special_count} Special Attacks"
+    puts "Imported #{special_count} Gen 8 Special Attacks"
 
   end
+
+  desc "Import Items from CSV file"
+  task item: :environment do
+    require 'csv'
+    count = 0
+    CSV.foreach('./db/Gen_8/ItemDex/HeldItems.csv', headers: true) do |row|
+      Item.create!(row.to_h)
+      count += 1
+    end
+    puts "Imported #{count} Gen 8 Items"
+  end
+
+  # desc "Import Natures from CSV file"
+  # task customer: :environment do
+  #   require 'csv'
+  #   count = 0
+  #   CSV.foreach('./db/Gen_8/AbilityDex/AbilityDex.csv', headers: true) do |row|
+  #     Customer.create!(row.to_h)
+  #     count += 1
+  #   end
+  #   puts "Imported #{count} Customers"
+  # end
+
+    #
+    # desc "Import Alt Forms from CSV file"
+    # task customer: :environment do
+    #   require 'csv'
+    #   count = 0
+    #   CSV.foreach('./db/Gen_8/AbilityDex/AbilityDex.csv', headers: true) do |row|
+    #     Customer.create!(row.to_h)
+    #     count += 1
+    #   end
+    #   puts "Imported #{count} Customers"
+    # end
+    #
+    # desc "Import Pokemon from CSV file"
+    # task customer: :environment do
+    #   require 'csv'
+    #   count = 0
+    #   CSV.foreach('./db/Gen_8/AbilityDex/AbilityDex.csv', headers: true) do |row|
+    #     Customer.create!(row.to_h)
+    #     count += 1
+    #   end
+    #   puts "Imported #{count} Customers"
+    # end
+
 
   task :all => [:ability, :attack]
 end
