@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Pokemon, type: :model do
   describe "Validations" do
-    it { should validate_presence_of :dex_number }
+    it { should validate_presence_of :pokedex_number }
     it { should validate_presence_of :name }
     it { should validate_presence_of :type_1 }
     it { should validate_presence_of :type_2 }
@@ -20,7 +20,9 @@ RSpec.describe Pokemon, type: :model do
   end
 
   describe "Relationships" do
-    it {should have_many :ability_pokemons}
-    it {should have_many(:abilities).through :ability_pokemons}
+    it {should have_many :abilities_pokemons}
+    it {should have_many(:abilities).through :abilities_pokemons}
+    it {should have_many :attacks_pokemons}
+    it {should have_many(:attacks).through :attacks_pokemons}
   end
 end
