@@ -1,3 +1,0 @@
-class AttackAlternateForm < ApplicationRecord
-
-end
