@@ -1,4 +1,4 @@
-Dex_Number,Name,Type_1,Type_2,Ability_1,Ability_2,Ability_3,Ability_4,HP,Attack,Defense,Special_Attack,Special_Defense,Speed,Image_Url
+pokedex_number,name,type_1,type_2,ability_1,ability_2,ability_3,ability_4,hp,attack,defense,special_attack,special_defense,speed,image_url
 001,Grookey,GRASS,null,Overgrow,Grassy Surge,null,null,50,65,50,40,40,65,"https://imgur.com/WRwFWXn.png"
 002,Thwackey,GRASS,null,Overgrow,Grassy Surge,null,null,70,85,70,55,60,80,"https://imgur.com/E1dMWHw.png"
 003,Rillaboom,GRASS,null,Overgrow,Grassy Surge,null,null,100,125,90,60,70,85,"https://imgur.com/zGzZvod.png"

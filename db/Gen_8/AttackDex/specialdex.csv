@@ -1,4 +1,4 @@
-Name,Type,PP,Attack,Accuracy,Effect
+name,attack_type,pp,attack,accuracy,effect
 Absorb,GRASS,25,20,100,"A nutrient-draining attack. The user's HP is restored by half the damage taken by the target."
 Acid,POISON,30,40,100,"Opposing Pokémon are attacked with a spray of harsh acid. This may also lower their Sp. Def stats."
 Acid Downpour,POISON,1,--,101,"This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered."

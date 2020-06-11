@@ -1,4 +1,4 @@
-Name,Type,PP,Attack,Accuracy,Effect
+name,attack_type,pp,attack,accuracy,effect
 Accelerock,ROCK,20,40,100,"The user smashes into the target at high speed. This move always goes first."
 Acid Downpour,POISON,1,--,101,"This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered."
 Acrobatics,FLYING,15,55,100,"The user nimbly strikes the target. If the user is not holding an item, this attack inflicts massive damage."

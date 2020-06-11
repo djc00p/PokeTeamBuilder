@@ -1,4 +1,4 @@
-Name,Type,PP,Attack,Accuracy,Effect
+name,attack_type,pp,attack,accuracy,effect
 Acid Armor,POISON,20,--,101,"The user alters its cellular structure to liquefy itself, sharply raising its Defense stat."
 Acupressure,NORMAL,30,--,101,"The user applies pressure to stress points, sharply boosting one of its or its allies' stats."
 After You,NORMAL,15,--,101,"The user helps the target and makes it use its move right after the user."
