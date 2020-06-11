@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_09_205056) do
+ActiveRecord::Schema.define(version: 2020_06_11_181727) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,8 @@ ActiveRecord::Schema.define(version: 2020_06_09_205056) do
     t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "pokemon_id", null: false
+    t.index ["pokemon_id"], name: "index_alternate_forms_on_pokemon_id"
   end
 
   create_table "alternate_forms_attacks", id: false, force: :cascade do |t|
@@ -68,6 +70,15 @@ ActiveRecord::Schema.define(version: 2020_06_09_205056) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["alternate_form_id", "attack_id"], name: "index_alternate_forms_id_and_attack_id"
     t.index ["attack_id", "alternate_form_id"], name: "index_attack_id_and_alternate_forms_id"
+  end
+
+  create_table "alternate_forms_pokemons", id: false, force: :cascade do |t|
+    t.bigint "alternate_form_id", null: false
+    t.bigint "pokemon_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["alternate_form_id", "pokemon_id"], name: "index_on_alternate_form_id_and_pokemon_id"
+    t.index ["pokemon_id", "alternate_form_id"], name: "index_on_pokemon_id_and_alternate_form_id_"
   end
 
   create_table "attacks", force: :cascade do |t|
@@ -129,4 +140,5 @@ ActiveRecord::Schema.define(version: 2020_06_09_205056) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "alternate_forms", "pokemons"
 end
