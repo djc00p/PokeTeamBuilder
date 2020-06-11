@@ -13,7 +13,7 @@ RSpec.describe Attack, type: :model do
   end
 
   describe "Relationships" do
-    it {should have_many :attacks_alternate_forms}
-    it {should have_many(:alternate_forms).through :attacks_alternate_forms}
+    it {should have_many :alternate_forms_attacks}
+    it {should have_many(:alternate_forms).through :alternate_forms_attacks}
   end
 end
