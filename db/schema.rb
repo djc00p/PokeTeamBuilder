@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_06_200311) do
+ActiveRecord::Schema.define(version: 2020_06_09_205056) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,15 +70,6 @@ ActiveRecord::Schema.define(version: 2020_06_06_200311) do
     t.index ["attack_id", "alternate_form_id"], name: "index_attack_id_and_alternate_forms_id"
   end
 
-  create_table "alternate_forms_natures", id: false, force: :cascade do |t|
-    t.bigint "alternate_form_id", null: false
-    t.bigint "nature_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["alternate_form_id", "nature_id"], name: "index_alternate_forms_id_and_nature_id"
-    t.index ["nature_id", "alternate_form_id"], name: "index_nature_id_and_alternate_forms_id"
-  end
-
   create_table "attacks", force: :cascade do |t|
     t.string "name"
     t.string "type"
@@ -88,6 +79,8 @@ ActiveRecord::Schema.define(version: 2020_06_06_200311) do
     t.text "effect"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "attack_type"
+    t.string "type_img"
   end
 
   create_table "attacks_pokemons", id: false, force: :cascade do |t|
@@ -116,15 +109,6 @@ ActiveRecord::Schema.define(version: 2020_06_06_200311) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "natures_pokemons", id: false, force: :cascade do |t|
-    t.bigint "pokemon_id", null: false
-    t.bigint "nature_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["nature_id", "pokemon_id"], name: "index_natures_pokemons_on_nature_id_and_pokemon_id"
-    t.index ["pokemon_id", "nature_id"], name: "index_natures_pokemons_on_pokemon_id_and_nature_id"
-  end
-
   create_table "pokemons", force: :cascade do |t|
     t.string "pokedex_number"
     t.string "name"
@@ -145,16 +129,4 @@ ActiveRecord::Schema.define(version: 2020_06_06_200311) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "abilities_alternate_forms", "abilities"
-  add_foreign_key "abilities_alternate_forms", "alternate_forms"
-  add_foreign_key "abilities_pokemons", "abilities"
-  add_foreign_key "abilities_pokemons", "pokemons"
-  add_foreign_key "attacks_alternate_forms", "attacks"
-  add_foreign_key "attacks_alternate_forms", "alternate_forms"
-  add_foreign_key "attacks_pokemons", "attacks"
-  add_foreign_key "attacks_pokemons", "pokemons"
-  add_foreign_key "natures_alternate_forms", "natures"
-  add_foreign_key "natures_alternate_forms", "alternate_forms"
-  add_foreign_key "natures_pokemons", "natures"
-  add_foreign_key "natures_pokemons", "pokemons"
 end
