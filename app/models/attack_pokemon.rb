@@ -1,3 +1,0 @@
-class AttackPokemon < ApplicationRecord
-
-end
