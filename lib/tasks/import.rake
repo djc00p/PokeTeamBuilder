@@ -18,7 +18,7 @@ namespace :import do
     special_count = 0
 
     # Other Attacks
-    CSV.foreach('./db/Gen_8/AttackDex/otherdex.csv', headers: true, :header_converters => lambda { |h| h.try(:downcase) }) do |row|
+    CSV.foreach('./db/Gen_8/AttackDex/otherdex.csv', headers: true) do |row|
       Attack.create!(
         {
         name: row["name"],
@@ -36,7 +36,7 @@ namespace :import do
     puts "Imported #{other_count} Gen 8 Other Attacks"
 
     # Physical Attacks
-    CSV.foreach('./db/Gen_8/AttackDex/physicaldex.csv', headers: true, :header_converters => lambda { |h| h.try(:downcase) }) do |row|
+    CSV.foreach('./db/Gen_8/AttackDex/physicaldex.csv', headers: true) do |row|
       Attack.create!(
         {
         name: row["name"],
@@ -54,7 +54,7 @@ namespace :import do
     puts "Imported #{physical_count} Gen 8 Physical Attacks"
 
     # Special Attacks
-    CSV.foreach('./db/Gen_8/AttackDex/specialdex.csv', headers: true, :header_converters => lambda { |h| h.try(:downcase) }) do |row|
+    CSV.foreach('./db/Gen_8/AttackDex/specialdex.csv', headers: true) do |row|
       Attack.create!(
         {
         name: row["name"],
@@ -84,16 +84,16 @@ namespace :import do
     puts "Imported #{count} Gen 8 Items"
   end
 
-  # desc "Import Natures from CSV file"
-  # task customer: :environment do
-  #   require 'csv'
-  #   count = 0
-  #   CSV.foreach('./db/Gen_8/AbilityDex/AbilityDex.csv', headers: true) do |row|
-  #     Customer.create!(row.to_h)
-  #     count += 1
-  #   end
-  #   puts "Imported #{count} Customers"
-  # end
+  desc "Import Natures from CSV file"
+  task nature: :environment do
+    require 'csv'
+    count = 0
+    CSV.foreach('./db/Gen_8/Nature/NatureDex.csv', headers: true) do |row|
+      Nature.create!(row.to_h)
+      count += 1
+    end
+    puts "Imported #{count} Gen 8 Natures"
+  end
 
     #
     # desc "Import Alt Forms from CSV file"
