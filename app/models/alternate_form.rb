@@ -1,4 +1,5 @@
 class AlternateForm < ApplicationRecord
+  # Validations
   validates_presence_of :pokedex_number
   validates_presence_of :name
   validates_presence_of :type_1
@@ -14,6 +15,8 @@ class AlternateForm < ApplicationRecord
   validates_numericality_of :special_defense
   validates_numericality_of :speed
   validates_presence_of :image_url
+  # Relationships
+  belongs_to :pokemon
   has_many :abilities_alternate_forms
   has_many :abilities, through: :abilities_alternate_forms
   has_many :alternate_forms_attacks
