@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_11_181727) do
+ActiveRecord::Schema.define(version: 2020_06_11_195110) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,7 +83,7 @@ ActiveRecord::Schema.define(version: 2020_06_11_181727) do
 
   create_table "attacks", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "move_type"
     t.integer "pp"
     t.string "attack"
     t.integer "accuracy"
@@ -91,7 +91,7 @@ ActiveRecord::Schema.define(version: 2020_06_11_181727) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "attack_type"
-    t.string "type_img"
+    t.string "move_type_img"
   end
 
   create_table "attacks_pokemons", id: false, force: :cascade do |t|
