@@ -1,4 +1,5 @@
 pokedex_number,name,type_1,type_2,ability_1,ability_2,ability_3,ability_4,hp,attack,defense,special_attack,special_defense,speed,image_url
+154,Basculin,WATER,null,Rock Head,Adaptability,Mold Breaker,null,70,92,65,80,55,98,"https://imgur.com/F1slCd8.png"
 182,Meowth,NORMAL,null,Pickup,Technician,Unnerve,null,40,45,35,40,40,90,"https://imgur.com/1lPtRFK.png"
 327,Yamask,GHOST,null,Mummy,null,null,null,38,30,85,55,65,30,"https://imgur.com/FCgGh39.png"
 333,Ponyta,FIRE,null,Run Away,Flash Fire,Flame Body,null,50,85,55,65,65,90,"https://imgur.com/NJxrZ4U.png"
