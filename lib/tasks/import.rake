@@ -95,29 +95,77 @@ namespace :import do
     puts "Imported #{count} Gen 8 Natures"
   end
 
-    #
-    # desc "Import Alt Forms from CSV file"
-    # task customer: :environment do
-    #   require 'csv'
-    #   count = 0
-    #   CSV.foreach('./db/Gen_8/AbilityDex/AbilityDex.csv', headers: true) do |row|
-    #     Customer.create!(row.to_h)
-    #     count += 1
-    #   end
-    #   puts "Imported #{count} Customers"
-    # end
-    #
-    # desc "Import Pokemon from CSV file"
-    # task customer: :environment do
-    #   require 'csv'
-    #   count = 0
-    #   CSV.foreach('./db/Gen_8/AbilityDex/AbilityDex.csv', headers: true) do |row|
-    #     Customer.create!(row.to_h)
-    #     count += 1
-    #   end
-    #   puts "Imported #{count} Customers"
-    # end
 
+  desc "Import Pokemons from CSV file"
+
+  task pokemon: :environment do
+    Pokemon.destroy_all
+    require 'csv'
+    count = 0
+    CSV.foreach('./db/Gen_8/Galar_Pokedex/GalarDex.csv', headers: true) do |row|
+    mon = Pokemon.create!(
+        pokedex_number: row["pokedex_number"],
+        name: row["name"],
+        type_1: row["type_1"],
+        type_2: row["type_2"],
+        ability_1: row["ability_1"],
+        ability_2: row["ability_2"],
+        ability_3: row["ability_3"],
+        ability_4: row["ability_4"],
+        hp: row["hp"],
+        defense: row["defense"],
+        attack: row["attack"],
+        special_attack: row["special_attack"],
+        special_defense: row["special_defense"],
+        speed: row["speed"],
+        image_url: row["image_url"]
+      )
+      count += 1
+      abilities_jointables(mon, "og")
+    end
+
+    puts "Imported #{count} Gen 8 Galar Pokedex entries"
+  end
+
+  def abilities_jointables(pokemon, form)
+    if pokemon.ability_4 != "null"
+      create_abilities_pokemon(pokemon.ability_4, pokemon, form)
+      create_abilities_pokemon(pokemon.ability_3, pokemon, form)
+      create_abilities_pokemon(pokemon.ability_2, pokemon, form)
+      create_abilities_pokemon(pokemon.ability_1, pokemon, form)
+      puts "Created 4 AbilitiesPokemon for #{pokemon.name}"
+    elsif pokemon.ability_3 != "null"
+      create_abilities_pokemon(pokemon.ability_3, pokemon, form)
+      create_abilities_pokemon(pokemon.ability_2, pokemon, form)
+      create_abilities_pokemon(pokemon.ability_1, pokemon, form)
+      puts "Created 3 AbilitiesPokemon for #{pokemon.name}"
+    elsif pokemon.ability_2 != "null"
+      create_abilities_pokemon(pokemon.ability_2, pokemon, form)
+      create_abilities_pokemon(pokemon.ability_1, pokemon, form)
+      puts "Created 2 AbilitiesPokemon for #{pokemon.name}"
+    else
+      create_abilities_pokemon(pokemon.ability_1, pokemon, form)
+      puts "Created 1 AbilitiesPokemon for #{pokemon.name}"
+    end
+  end
+
+  def create_abilities_pokemon(ability, pokemon, form)
+    if form == "og"
+      AbilitiesPokemon.create!(
+        {
+          ability_id: Ability.find_by(name: ability).id,
+          pokemon_id: pokemon.id
+        }
+      )
+    else
+      AbilitiesAlternateForm.create!(
+        {
+          ability_id: Ability.find_by(name: ability).id,
+          alternate_form_id: pokemon.id
+        }
+      )
+    end
+  end
 
   task :all => [:ability, :attack]
 end
