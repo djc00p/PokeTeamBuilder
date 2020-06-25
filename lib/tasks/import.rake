@@ -97,9 +97,7 @@ namespace :import do
 
 
   desc "Import Pokemons from CSV file"
-
   task pokemon: :environment do
-    Pokemon.destroy_all
     require 'csv'
     count = 0
     CSV.foreach('./db/Gen_8/Galar_Pokedex/GalarDex.csv', headers: true) do |row|
@@ -125,6 +123,36 @@ namespace :import do
     end
 
     puts "Imported #{count} Gen 8 Galar Pokedex entries"
+  end
+
+  desc "Import AlternateForms from CSV file"
+  task alternate_form: :environment do
+    require 'csv'
+    count = 0
+    CSV.foreach('./db/Gen_8/Galar_Pokedex/GalarDexAlternateForms.csv', headers: true) do |row|
+      mon = AlternateForm.create!(
+        pokedex_number: row["pokedex_number"],
+        name: row["name"],
+        type_1: row["type_1"],
+        type_2: row["type_2"],
+        ability_1: row["ability_1"],
+        ability_2: row["ability_2"],
+        ability_3: row["ability_3"],
+        ability_4: row["ability_4"],
+        hp: row["hp"],
+        defense: row["defense"],
+        attack: row["attack"],
+        special_attack: row["special_attack"],
+        special_defense: row["special_defense"],
+        speed: row["speed"],
+        image_url: row["image_url"],
+        pokemon_id: Pokemon.find_by(pokedex_number: row["pokedex_number"]).id
+      )
+      count += 1
+      abilities_jointables(mon, "alt")
+    end
+
+    puts "Imported #{count} Gen 8 Galar Pokedex Alternate Forms entries"
   end
 
   def abilities_jointables(pokemon, form)
@@ -167,5 +195,5 @@ namespace :import do
     end
   end
 
-  task :all => [:ability, :attack]
+  task :all => [:ability, :attack, :item, :nature, :pokemon, :alternate_form]
 end
