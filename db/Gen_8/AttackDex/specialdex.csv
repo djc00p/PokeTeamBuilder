@@ -209,7 +209,7 @@ Twinkle Tackle,FAIRY,1,--,101,"This move can't be used. It's recommended that th
 Twister,DRAGON,20,40,100,"The user whips up a vicious tornado to tear at opposing Pokémon. This may also make them flinch."
 Uproar,NORMAL,10,90,100,"The user attacks in an uproar for three turns. During that time, no Pokémon can fall asleep."
 Vacuum Wave,FIGHTING,30,40,100,"The user whirls its fists to send a wave of pure vacuum at the target. This move always goes first."
-enoshock,POISON,10,65,100,"The user drenches the target in a special poisonous liquid. This move's power is doubled if the target is poisoned."
+Venoshock,POISON,10,65,100,"The user drenches the target in a special poisonous liquid. This move's power is doubled if the target is poisoned."
 Volt Switch,ELECTRIC,20,70,100,"After making its attack, the user rushes back to switch places with a party Pokémon in waiting."
 Water Gun,WATER,25,40,100,"The target is blasted with a forceful shot of water."
 Water Pledge,WATER,10,80,100,"A column of water hits the target. When used with its fire equivalent, its power increases and a rainbow appears."
