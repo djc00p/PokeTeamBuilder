@@ -82,6 +82,7 @@ Drill Peck,FLYING,20,80,100,"A corkscrewing attack that strikes the target with 
 Drill Run,GROUND,10,80,95,"The user crashes into its target while rotating its body like a drill. Critical hits land more easily."
 Drum Beating,GRASS,10,80,100,"The user plays its drum, controlling the drum's roots to attack the target. This also lowers the target's Speed stat."
 Dual Chop,DRAGON,15,40,90,"The user attacks its target by hitting it with brutal strikes. The target is hit twice in a row."
+Dual Wingbeat,FLYING,10,40,90,"The user slams the target with its wings. The target is hit twice in a row."
 Dynamic Punch,FIGHTING,5,100,50,"The user punches the target with full, concentrated power. This confuses the target if it hits."
 Earthquake,GROUND,10,100,100,"The user sets off an earthquake that strikes every Pokémon around it."
 Egg Bomb,NORMAL,10,100,75,"This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered."

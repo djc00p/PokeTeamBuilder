@@ -68,7 +68,7 @@ Flower Shield,FAIRY,10,--,101,"The user raises the Defense stats of all Grass-ty
 Focus Energy,NORMAL,30,--,101,"The user takes a deep breath and focuses so that critical hits land more easily."
 Follow Me,NORMAL,20,--,101,"The user draws attention to itself, making all targets take aim only at the user."
 Foresight,NORMAL,40,--,101,"This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered."
-Curse Forest's Curse,GRASS,20,--,100,"The user puts a forest curse on the target. The target is now Grass type as well."
+Forest's Curse,GRASS,20,--,100,"The user puts a forest curse on the target. The target is now Grass type as well."
 Gastro Acid,POISON,10,--,100,"The user hurls up its stomach acids on the target. The fluid eliminates the effect of the target's Ability."
 Gear Up,STEEL,20,--,101,"The user engages its gears to raise the Attack and Sp. Atk stats of ally Pokémon with the Plus or Minus Ability."
 Geomancy,FAIRY,10,--,101,"The user absorbs energy and sharply raises its Sp. Atk, Sp. Def, and Speed stats on the next turn."
