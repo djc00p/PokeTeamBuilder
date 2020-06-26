@@ -1,4 +1,4 @@
-Name,Type,PP,Attack,Accuracy,Effect
+name,attack_type,pp,attack,accuracy,effect
 Acid Armor,POISON,20,--,101,"The user alters its cellular structure to liquefy itself, sharply raising its Defense stat."
 Acupressure,NORMAL,30,--,101,"The user applies pressure to stress points, sharply boosting one of its or its allies' stats."
 After You,NORMAL,15,--,101,"The user helps the target and makes it use its move right after the user."
@@ -27,6 +27,7 @@ Celebrate,NORMAL,40,--,101,"The Pokémon congratulates you on your special day!"
 Charge,ELECTRIC,20,--,101,"The user boosts the power of the Electric move it uses on the next turn. This also raises the user's Sp. Def stat."
 Charm,FAIRY,20,--,100,"The user gazes at the target rather charmingly, making it less wary. This harshly lowers the target's Attack stat."
 Clangorous Soul,DRAGON,5,--,100,"The user raises all its stats by using some of its HP."
+Coaching,FIGHTING,10,--,101,"The user properly coaches its ally Pokémon, boosting their Attack and Defense stats."
 Coil,POISON,20,--,101,"The user coils up and concentrates. This raises its Attack and Defense stats as well as its accuracy."
 Confide,NORMAL,20,--,101,"The user tells the target a secret, and the target loses its ability to concentrate. This lowers the target's Sp. Atk stat."
 Confuse Ray,GHOST,10,--,100,"The target is exposed to a sinister ray that triggers confusion."
@@ -67,7 +68,7 @@ Flower Shield,FAIRY,10,--,101,"The user raises the Defense stats of all Grass-ty
 Focus Energy,NORMAL,30,--,101,"The user takes a deep breath and focuses so that critical hits land more easily."
 Follow Me,NORMAL,20,--,101,"The user draws attention to itself, making all targets take aim only at the user."
 Foresight,NORMAL,40,--,101,"This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered."
-Curse Forest's Curse,GRASS,20,--,100,"The user puts a forest curse on the target. The target is now Grass type as well."
+Forest's Curse,GRASS,20,--,100,"The user puts a forest curse on the target. The target is now Grass type as well."
 Gastro Acid,POISON,10,--,100,"The user hurls up its stomach acids on the target. The fluid eliminates the effect of the target's Ability."
 Gear Up,STEEL,20,--,101,"The user engages its gears to raise the Attack and Sp. Atk stats of ally Pokémon with the Plus or Minus Ability."
 Geomancy,FAIRY,10,--,101,"The user absorbs energy and sharply raises its Sp. Atk, Sp. Def, and Speed stats on the next turn."
