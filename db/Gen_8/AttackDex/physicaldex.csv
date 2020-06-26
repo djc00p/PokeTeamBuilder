@@ -151,6 +151,7 @@ G-Max Wind Rage,FLYING,10,--,101,"A Flying-type attack that Gigantamax Corviknig
 Gear Grind,STEEL,15,50,85,"The user attacks by throwing steel gears at its target twice."
 Giga Impact,NORMAL,5,150,90,"The user charges at the target using every bit of its power. The user can't move on the next turn."
 Gigavolt Havoc,ELECTRIC,1,--,101,"This move can't be used. It's recommended that this move is forgotten. Once forgotten, this move can't be remembered."
+Grassy Glide,GRASS,20,70,100,"Gliding on the ground, the user attacks the target. This move always goes first on Grassy Terrain."
 Grav Apple,GRASS,10,80,100,"The user inflicts damage by dropping an apple from high above. This also lowers the target's Defense stat."
 Guillotine,NORMAL,5,--,30,"A vicious, tearing attack with big pincers. The target faints instantly if this attack hits."
 Gunk Shot,POISON,5,120,80,"The user shoots filthy garbage at the target to attack. This may also poison the target."
